@@ -11,7 +11,7 @@ export default function Square({ color, onClick }) {
     return (
         <div
             onClick={onClick}
-            className="Square"
+            className="square"
             style={{ backgroundColor: color }}
         ></div>
     )

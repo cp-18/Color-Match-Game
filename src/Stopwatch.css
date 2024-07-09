@@ -1,4 +1,9 @@
-.buttons {
-    display: flex;
-    gap: 2em;
+.clock {
+    margin: 1em;
+    padding: .5em;
+    border-radius: 10px;
+    background-color: #ff5757;
+    color: rgb(253, 222, 211);
+    font-family: "Courier Prime", monospace;
+    font-size: 2rem;
 }
