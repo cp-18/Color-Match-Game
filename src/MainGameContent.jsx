@@ -21,8 +21,6 @@ const colorsArray = [
 the array, which will be 7, since the array that will eventually be passed in is "colorsArray" which has 7 hexcodes. 
 ColorsArray is passed via props from app.jsx. When RandomPick is called (in the Square component), it will return an 
 element from that array, whose index is set to the random number chosen by "index."*/
-
-
 function randomPick(array) {
     const index = Math.floor(Math.random() * array.length);
     return array[index];
@@ -34,7 +32,6 @@ for each square starts off with what is generated for "initialColors." How the s
 with no repeating colors), is that it uses a for loop to create a random number 1-7 (from colorArrayCopy), then 
 [splicedItem] is using the splice method to basically cut out that random number from colorsArrayCopy and then push 
 it onto newArray. This happens 5 times  */
-
 const genRandomColors = (colorsArray) => {
     const colorArrayCopy = [...colorsArray];
     const newArray = [];
@@ -52,7 +49,6 @@ Uses the .every array method. This method uses a callback function (to execute f
 in the array) where you must pass in the element being processed (color), but can also pass 
 in the index and array. By also passing arr into parameters, I can check if each color is 
 equal to arr[0]. */
-
 const allColorsEqual = (colors) =>
     colors.every((color, i, arr) => color === arr[0]);
 
@@ -80,7 +76,6 @@ when they are all equal.
 ** remember: useEffect runs with every render of the component; renders initially when it first loads, but also renders 
 whenever the state changes. Dependencies tell useEffect to work when just those things change/rerender **
 */
-
 export default function MainGameContent() {
     const [count, setCount] = useState(0);
     const [initialColors] = useState(() => genRandomColors(colorsArray));
@@ -96,7 +91,6 @@ export default function MainGameContent() {
     function will be passed into setIsCompleted, checking if all five boxes are the same color--which 
     results in a true or false value. So essentially if that runs and they are not the same value, 
     setIsCompleted is set to 'false'*/
-
     useEffect(() => {
         setIsCompleted(allColorsEqual(colors));
     }, [colors]);
@@ -112,7 +106,6 @@ export default function MainGameContent() {
     /* If timerOn is activated/set to true, setInterval logic is used to start keeping time (setTime), 
     otherwise the interval is cleared and returns to null value. When any square is clicked, this sets 
     timer on to be true (see Square props) */
-
     useEffect(() => {
         let interval = null;
         if (timerOn) {
@@ -128,7 +121,6 @@ export default function MainGameContent() {
 
     /*Resets click count and timer to zero, stop the timer from running, and
     generates a new random array of colors */
-
     const reset = () => {
         setCount(0);
         setColors(genRandomColors(colorsArray));
@@ -182,6 +174,8 @@ export default function MainGameContent() {
                     </div>
                     <button onClick={reset}>reset</button>
                 </div>
+                <ScoresList time={time} count={count} isCompleted={isCompleted} />
+
             </div>
         </>
     );
