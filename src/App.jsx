@@ -8,7 +8,7 @@ function App() {
     <>
       <div className="container">
         <div className="gameBackground">
-          <img src="src/images/title.png" alt="transcript: Color Match" id="gameTitle" />
+          <img src="public/images/title.png" alt="transcript: Color Match" id="gameTitle" />
           <MainGameContent />
         </div>
       </div>

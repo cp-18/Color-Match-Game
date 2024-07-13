@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import './ScoresList.css'
+import './ScoresList.css';
 
 export default function ScoresList({ time, count, isCompleted }) {
 
