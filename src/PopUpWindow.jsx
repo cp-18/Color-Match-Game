@@ -16,8 +16,8 @@ export default function PopUpWindow() {
     return (
         <>
             <div className={viewWindow ? "completedGame" : "closed"}>
-                <img src="/Users/caitlinpomeroy/Desktop/NEW_PROJECTS/ReactGame/react-game/public/images/x.png" alt="x" id="close" onClick={closeWindow} />
-                <img src="/Users/caitlinpomeroy/Desktop/NEW_PROJECTS/ReactGame/react-game/public/images/completed.gif" id="completed" alt="transcript: Great Job!" />
+                <img src="/images/x.png" alt="x" id="close" onClick={closeWindow} />
+                <img src="/images/completed.gif" id="completed" alt="transcript: Great Job!" />
             </div>
         </>
     )
