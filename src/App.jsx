@@ -8,7 +8,7 @@ function App() {
     <>
       <div className="container">
         <div className="gameBackground">
-          <img src="public/images/title.png" alt="transcript: Color Match" id="gameTitle" />
+          <img src="/Users/caitlinpomeroy/Desktop/NEW_PROJECTS/ReactGame/react-game/public/images/title.png" alt="transcript: Color Match" id="gameTitle" />
           <MainGameContent />
         </div>
       </div>
